@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ScrollView01"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none" >
+
+    <LinearLayout
+
+        android:id="@+id/headerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:label="Strona Główna"
+        tools:context=".HomeActivity"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/koszyk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Koszyk" />
+
+
+        <ImageView
+            android:id="@+id/pizza"
+            android:layout_width="wrap_content"
+            android:layout_height="263dp"
+            android:src="@drawable/pizza">
+
+        </ImageView>
+
+        <Button
+            android:id="@+id/pizzaItaliana"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pizza Italiana" />
+
+        <ImageView
+            android:id="@+id/kebab"
+            android:layout_width="wrap_content"
+            android:layout_height="312dp"
+            android:src="@drawable/kebab">
+
+        </ImageView>
+
+        <Button
+            android:id="@+id/TurkishKebab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Turkish Kebab" />
+
+        <Button
+            android:id="@+id/addresButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Adres" />
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

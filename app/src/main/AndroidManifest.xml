@@ -53,6 +53,26 @@
             android:name=".HomeActivity"
             android:exported="true"
             android:label="Strona Główna"></activity>
+        <activity
+            android:name=".BasketActivity"
+            android:exported="true"
+            android:label="Koszyk"></activity>
+        <activity
+            android:name=".PizzaActivity"
+            android:exported="true"
+            android:label="PizzaItaliana"></activity>
+        <activity
+            android:name=".MapActivity"
+            android:exported="true"
+            android:label="Mapa"></activity>
+        <activity
+            android:name=".AdressActivity"
+            android:exported="true"
+            android:label="Adres"></activity>
+        <activity
+            android:name=".KebabActivity"
+            android:exported="true"
+            android:label="Turkish Kebab"></activity>
     </application>
 
 </manifest>

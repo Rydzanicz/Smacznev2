@@ -13,7 +13,6 @@ public class LoginActivity extends AppCompatActivity {
     EditText username, password;
     Button btnlogin;
     DBHelper DB;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,15 +30,15 @@ public class LoginActivity extends AppCompatActivity {
                 String user = username.getText().toString();
                 String pass = password.getText().toString();
 
-                if (user.equals("") || pass.equals(""))
+                if(user.equals("")||pass.equals(""))
                     Toast.makeText(LoginActivity.this, "Wypelnij wszystkie pola", Toast.LENGTH_SHORT).show();
-                else {
+                else{
                     Boolean checkuserpass = DB.checkusernamepassword(user, pass);
-                    if (checkuserpass == true) {
+                    if(checkuserpass==true){
                         Toast.makeText(LoginActivity.this, "Zalogowano", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                        Intent intent  = new Intent(getApplicationContext(), HomeActivity.class);
                         startActivity(intent);
-                    } else {
+                    }else{
                         Toast.makeText(LoginActivity.this, "Niepoprawne dane", Toast.LENGTH_SHORT).show();
                     }
                 }

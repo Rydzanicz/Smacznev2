@@ -2,7 +2,6 @@ package com.example.smacznego;
 
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
     EditText username, password, repassword;
     Button signup, signin;
     DBHelper DB;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,28 +33,28 @@ public class MainActivity extends AppCompatActivity {
                 String pass = password.getText().toString();
                 String repass = repassword.getText().toString();
 
-                if (user.equals("") || pass.equals("") || repass.equals(""))
+                if(user.equals("")||pass.equals("")||repass.equals(""))
                     Toast.makeText(MainActivity.this, "Wpisz dane we wszystkie pola", Toast.LENGTH_SHORT).show();
-                else {
-                    if (pass.equals(repass)) {
+                else{
+                    if(pass.equals(repass)){
                         Boolean checkuser = DB.checkusername(user);
-                        if (checkuser == false) {
+                        if(checkuser==false){
                             Boolean insert = DB.insertData(user, pass);
-                            if (insert == true) {
+                            if(insert==true){
                                 Toast.makeText(MainActivity.this, "Rejestracja pomyślna", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                                Intent intent = new Intent(getApplicationContext(),HomeActivity.class);
                                 startActivity(intent);
-                            } else {
+                            }else{
                                 Toast.makeText(MainActivity.this, "Rejestracja nieudana", Toast.LENGTH_SHORT).show();
                             }
-                        } else {
+                        }
+                        else{
                             Toast.makeText(MainActivity.this, "Użytkownik już istnieje, zaloguj się", Toast.LENGTH_SHORT).show();
                         }
-                    } else {
+                    }else{
                         Toast.makeText(MainActivity.this, "Hasła są różne", Toast.LENGTH_SHORT).show();
                     }
-                }
-            }
+                } }
         });
 
         signin.setOnClickListener(new View.OnClickListener() {

@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nazwa Użytkownika"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="50dp"/>
 
     <EditText
         android:id="@+id/password"
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:hint="Hasło"
         android:layout_marginTop="50dp"
-        android:layout_below="@+id/username" />
+        android:layout_below="@+id/username"/>
 
     <EditText
         android:id="@+id/repassword"
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:hint="Powtórz Hasło"
         android:layout_marginTop="50dp"
-        android:layout_below="@+id/password" />
+        android:layout_below="@+id/password"/>
 
     <Button
         android:id="@+id/btnsignup"
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:text="Zarejestruj"
         android:layout_marginTop="50dp"
-        android:layout_below="@+id/repassword" />
+        android:layout_below="@+id/repassword"/>
 
     <Button
         android:id="@+id/btnsignin"
@@ -44,6 +44,6 @@
         android:layout_height="wrap_content"
         android:text="Użytkownik istnieje, przejdź do strony logowania"
         android:layout_marginTop="50dp"
-        android:layout_below="@+id/btnsignup" />
+        android:layout_below="@+id/btnsignup"/>
 
 </RelativeLayout>
