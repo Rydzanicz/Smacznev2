@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
-    Button kebab,basket,pizza,adress,map;
+    Button kebab,basket,pizza,adress;
 
     public void onCreate(Bundle savedInstanceState)
     {
@@ -37,13 +37,7 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        adress.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),AdressActivity.class);
-                startActivity(intent);
-            }
-        });
+
         kebab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

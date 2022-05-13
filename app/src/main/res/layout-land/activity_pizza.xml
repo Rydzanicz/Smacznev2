@@ -12,17 +12,18 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="-2dp"
-        android:layout_marginTop="109dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="323dp"
+        android:layout_marginTop="2dp"
         android:text="Pizza1"></TextView>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="1dp"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="109dp"
+        android:layout_marginTop="0dp"
         android:layout_toEndOf="@+id/pizza1"
         android:text="25 zł"></TextView>
 
@@ -30,27 +31,30 @@
         android:id="@+id/addPizza1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="149dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="26dp"
         android:text="Dodaj" />
 
     <TextView
         android:id="@+id/Pizza2"
-        android:layout_width="88dp"
-        android:layout_height="42dp"
-        android:layout_below="@+id/pizza1"
+        android:layout_width="87dp"
+        android:layout_height="33dp"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="85dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="325dp"
+        android:layout_marginTop="74dp"
         android:text="Pizza2"></TextView>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="3dp"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="213dp"
+        android:layout_marginTop="70dp"
         android:layout_toEndOf="@+id/Pizza2"
         android:text="35 zł"></TextView>
 
@@ -58,41 +62,46 @@
         android:id="@+id/addPizza2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="273dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="109dp"
+        android:layout_marginEnd="0dp"
         android:text="Dodaj" />
 
     <RatingBar
         android:id="@+id/ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/addPizza2"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginEnd="97dp"
-        android:layout_marginBottom="62dp" />
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="222dp" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="218dp"
         android:layout_height="62dp"
+        android:layout_below="@+id/ratingBar"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginEnd="96dp"
-        android:layout_marginBottom="121dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="228dp"
         android:text="Ocena twojego zadowolenia" />
 
     <Button
         android:id="@+id/submitButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/addPizza2"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="-9dp"
-        android:layout_marginTop="145dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="281dp"
+        android:layout_marginEnd="-2dp"
         android:text="Wyslij" />
 
 </RelativeLayout>
