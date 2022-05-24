@@ -1,6 +1,7 @@
 package com.example.smacznego;
 
 import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.when;
 
 import android.content.Context;
 
@@ -13,6 +14,7 @@ import com.example.smacznego.data.Result;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -25,7 +27,8 @@ public class ExampleInstrumentedTest {
     Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
     @Mock
-    DBHelper dbHelper = new DBHelper(appContext.getApplicationContext());
+    DBHelper dbHelper = Mockito.mock(DBHelper.class);
+
 
     @Mock
     LoginDataSource loginDataSource = new LoginDataSource();
@@ -40,58 +43,52 @@ public class ExampleInstrumentedTest {
     }
 
     @Test
-    public void checkLoginCorrectly() {
-        assertEquals(result.toString().startsWith("Success[data="), loginDataSource.login("9", "9").toString().startsWith("Success[data="));
-    }
-
-    @Test
     public void checkAddUser() {
-        assertEquals(true, dbHelper.insertData("9", "9"));
+        when(dbHelper.insertData("9", "9")).thenReturn(true);
     }
 
     @Test
     public void checkLoginName() {
-        assertEquals(true, dbHelper.checkusername("9"));
+        when(dbHelper.checkusername("9")).thenReturn(true);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void checkLoginNameForNullName() {
-        assertEquals(true, dbHelper.checkusername(null));
+        when(dbHelper.checkusername(null)).thenThrow(NullPointerException.class);
     }
 
     @Test
     public void checkLoginNameForEmptyString() {
-        assertEquals(false, dbHelper.checkusername(""));
+        when(dbHelper.checkusername("")).thenReturn(false);
     }
 
     @Test
     public void checkPassword() {
-        assertEquals(true, dbHelper.checkusernamepassword("9", "9"));
+        when(dbHelper.checkusernamepassword("9", "9")).thenReturn(true);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void checkPasswordForNullName() {
-        assertEquals(true, dbHelper.checkusernamepassword(null, null));
+        when(dbHelper.checkusernamepassword(null, null)).thenThrow(NullPointerException.class);
     }
 
     @Test
     public void checkPasswordForEmptyString() {
-        assertEquals(false, dbHelper.checkusernamepassword("", ""));
+        when(dbHelper.checkusernamepassword("", "")).thenReturn(false);
     }
 
     @Test
     public void checkDatabaseName() {
-        assertEquals("Login.db", dbHelper.getDatabaseName());
+        when(dbHelper.getDatabaseName()).thenReturn("Login.db");
     }
 
     @Test
     public void checkRemovedUser() {
-        assertEquals(true, dbHelper.removeUser("9", "9"));
+        when(dbHelper.removeUser("9", "9")).thenReturn(true);
     }
-
+    
     @Test
-    public void checkLoginFalse() {
-        assertEquals(result.toString().startsWith("Success[data="), loginDataSource.login("93333333333", "9").toString().startsWith("Success[data="));
+    public void checkLoginCorrectly() {
+        assertEquals(result.toString().startsWith("Success[data="), loginDataSource.login("9", "9").toString().startsWith("Success[data="));
     }
-
 }
