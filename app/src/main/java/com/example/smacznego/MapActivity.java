@@ -4,9 +4,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MapActivity extends AppCompatActivity {
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
+
+    GoogleMap map;
 
     TextView receiver_msg;
     @Override
@@ -15,16 +25,17 @@ public class MapActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
 
-        receiver_msg = (TextView)findViewById(R.id.receivedadress);
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
 
-        // create the get Intent object
-        Intent intent = getIntent();
+    }
 
-        // receive the value by getStringExtra() method
-        // and key must be same which is send by first activity
-        String str = intent.getStringExtra("message_key");
+    @Override
+    public void onMapReady(@NonNull GoogleMap googleMap) {
+        map = googleMap;
 
-        // display the string into textView
-        receiver_msg.setText(str);
+        LatLng uz = new LatLng(51.941277, 15.528960);
+        map.addMarker(new MarkerOptions().position(uz).title("UZ"));
+        map.moveCamera(CameraUpdateFactory.newLatLng(uz));
     }
 }
