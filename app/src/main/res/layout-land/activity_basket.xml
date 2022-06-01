@@ -6,53 +6,45 @@
 
 
     <TextView
-        android:id="@+id/napiwek"
-        android:layout_width="80dp"
-        android:layout_height="56dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="479dp"
-        android:layout_marginEnd="163dp"
-        android:text="Napiwek"></TextView>
-
-    <TextView
         android:id="@+id/amountTekst"
-        android:layout_width="80dp"
-        android:layout_height="56dp"
+        android:layout_width="234dp"
+        android:layout_height="138dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="86dp"
-        android:layout_marginEnd="339dp"
-        android:text="Napiwek"></TextView>
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="204dp"
+        android:text="Kwota do zapłaty"
+        android:textSize="25dp"></TextView>
 
     <TextView
         android:id="@+id/order"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="150dp"
+        android:layout_height="270dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="342dp"
-        android:layout_marginBottom="13dp"
-        android:text="Zamówienie"></TextView>
-
-    <SeekBar
-        android:id="@+id/seekBar"
-        android:layout_width="307dp"
-        android:layout_height="40dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="95dp"
-        android:max="20"
-        android:progress="5" />
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="263dp"
+        android:layout_marginBottom="99dp"
+        android:text="Zamówienie"
+        android:textSize="25dp"></TextView>
+
+    <EditText
+        android:id="@+id/note11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="97dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="210dp"
+        android:layout_marginEnd="43dp"
+        android:hint="Wprowadz Komentarz"
+        android:textSize="25dp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/button"
@@ -60,8 +52,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="225dp"
-        android:layout_marginBottom="49dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginBottom="95dp"
         android:text="Zapłać" />
 
 

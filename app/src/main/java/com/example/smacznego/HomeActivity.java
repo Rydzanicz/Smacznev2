@@ -1,6 +1,5 @@
 package com.example.smacznego;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -20,7 +19,6 @@ public class HomeActivity extends AppCompatActivity {
         kebab = (Button) findViewById(R.id.TurkishKebab);
         basket = (Button) findViewById(R.id.koszyk);
         pizza = (Button) findViewById(R.id.pizzaItaliana);
-        adress = (Button) findViewById(R.id.addresButton);
 
 
         basket.setOnClickListener(new View.OnClickListener() {

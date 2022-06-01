@@ -13,7 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nazwa Użytkownika"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="50dp"
+        android:textColor="?attr/tC"/>
 
     <EditText
         android:id="@+id/password"
@@ -30,7 +31,8 @@
         android:layout_height="wrap_content"
         android:hint="Powtórz Hasło"
         android:layout_marginTop="50dp"
-        android:layout_below="@+id/password"/>
+        android:layout_below="@+id/password"
+        android:textColor="?attr/tC"/>
 
     <Button
         android:id="@+id/btnsignup"

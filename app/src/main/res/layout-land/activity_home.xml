@@ -54,12 +54,6 @@
             android:layout_height="wrap_content"
             android:text="Turkish Kebab" />
 
-        <Button
-            android:id="@+id/addresButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Adres" />
-
 
 
     </LinearLayout>
