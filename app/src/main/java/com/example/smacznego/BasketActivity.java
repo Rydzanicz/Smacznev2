@@ -39,7 +39,7 @@ public class BasketActivity extends AppCompatActivity {
                     String rating = " Kwota:" + amount + "\n Notatka: " + send_text.getText().toString();
                     Toast.makeText(BasketActivity.this, rating, Toast.LENGTH_LONG).show();
 
-                    Intent intent = new Intent(getApplicationContext(), MapActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), PaymentActivity.class);
                     startActivity(intent);
                 }
             }

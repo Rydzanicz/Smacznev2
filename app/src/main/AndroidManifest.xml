@@ -72,9 +72,9 @@
             android:exported="true"
             android:label="Mapa"></activity>
         <activity
-            android:name=".AdressActivity"
+            android:name=".PaymentActivity"
             android:exported="true"
-            android:label="Adres"></activity>
+            android:label="Płatność"></activity>
         <activity
             android:name=".KebabActivity"
             android:exported="true"

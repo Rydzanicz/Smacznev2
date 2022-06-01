@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdressActivity"
+    tools:context=".PaymentActivity"
     android:id="@+id/basketCont">
 
 
@@ -14,7 +14,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:textSize="25dp"
-        android:hint="Wprowadz adres"
+        android:hint="Wprowadz Kod Blik"
         android:textStyle="bold"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="40dp"/>
@@ -22,7 +22,7 @@
         android:id="@+id/sendadressbutton"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:text="send"
+        android:text="Płać"
         android:textStyle="bold"
         android:layout_marginTop="150dp"
         android:layout_marginLeft="150dp"/>
