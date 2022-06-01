@@ -5,26 +5,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
 public class BasketActivity extends AppCompatActivity {
 
     Button button;
-    int amount = 0, tip = 0;
-    SeekBar simpleSeekBar;
+    int amount = 0;
     private TextView tekst;
-    private AppBarConfiguration appBarConfiguration;
-    FragmentManager fragmentManager;
+    EditText send_text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,29 +26,16 @@ public class BasketActivity extends AppCompatActivity {
         Intent intent = getIntent();
         amount = intent.getIntExtra("pizza", 0);
         tekst.setText("Do zapłaty: " + amount);
+        send_text = (EditText)findViewById(R.id.note11);
 
-        simpleSeekBar = (SeekBar) findViewById(R.id.seekBar);
-
-        simpleSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            int progressChangedValue = 0;
-
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                progressChangedValue = progress;
-            }
-
-            public void onStartTrackingTouch(SeekBar seekBar) {
-            }
-
-            public void onStopTrackingTouch(SeekBar seekBar) {
-                tip = progressChangedValue;
-                tekst.setText("Do zapłaty: " + (amount + tip));
-            }
-        });
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), AdressActivity.class);
+                String rating = " Kwota:" + amount + "\n Notatka: " + send_text.getText().toString();
+                Toast.makeText(BasketActivity.this, rating, Toast.LENGTH_LONG).show();
+
+                Intent intent = new Intent(getApplicationContext(), MapActivity.class);
                 startActivity(intent);
             }
         });
