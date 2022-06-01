@@ -26,17 +26,22 @@ public class BasketActivity extends AppCompatActivity {
         Intent intent = getIntent();
         amount = intent.getIntExtra("pizza", 0);
         tekst.setText("Do zapłaty: " + amount);
-        send_text = (EditText)findViewById(R.id.note11);
+        send_text = (EditText) findViewById(R.id.note11);
 
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String rating = " Kwota:" + amount + "\n Notatka: " + send_text.getText().toString();
-                Toast.makeText(BasketActivity.this, rating, Toast.LENGTH_LONG).show();
+                if (amount == 0) {
+                    Toast.makeText(BasketActivity.this, "Nic nie dodano do koszyka", Toast.LENGTH_LONG).show();
 
-                Intent intent = new Intent(getApplicationContext(), MapActivity.class);
-                startActivity(intent);
+                } else {
+                    String rating = " Kwota:" + amount + "\n Notatka: " + send_text.getText().toString();
+                    Toast.makeText(BasketActivity.this, rating, Toast.LENGTH_LONG).show();
+
+                    Intent intent = new Intent(getApplicationContext(), MapActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 
