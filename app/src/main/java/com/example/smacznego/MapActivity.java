@@ -1,6 +1,5 @@
 package com.example.smacznego;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -34,7 +33,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     public void onMapReady(@NonNull GoogleMap googleMap) {
         map = googleMap;
 
-        LatLng uz = new LatLng(51.941277, 15.528960);
+        LatLng uz = new LatLng(51.93585674582447, 15.511602353581273);
         map.addMarker(new MarkerOptions().position(uz).title("UZ"));
         map.moveCamera(CameraUpdateFactory.newLatLng(uz));
     }
