@@ -35,7 +35,7 @@
         android:layout_marginStart="170dp"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="240dp"
-        android:text="Otwarcie 26.01.2022"></TextView>
+        android:text="Otwarcie 26.06.2022"></TextView>
 
     <CalendarView
         android:id="@+id/calendarView"
@@ -47,20 +47,12 @@
         android:layout_marginStart="-1dp"
         android:layout_marginTop="263dp"
         android:accessibilityHeading="false"
-        android:maxDate="06/31/2022"
+        android:maxDate="6/30/2022"
+        android:minDate="6/01/2022"
         android:measureAllChildren="true"
-        android:minDate="06/01/2022"
         android:touchscreenBlocksFocus="false" />
 
-    <fragment
-        android:layout_width="match_parent"
-        android:layout_height="466dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginBottom="1dp">
 
-    </fragment>
 
 
 
