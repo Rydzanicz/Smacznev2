@@ -19,7 +19,8 @@
         android:layout_height="wrap_content"
         android:hint="Hasło"
         android:layout_marginTop="50dp"
-        android:layout_below="@+id/username1"/>
+        android:layout_below="@+id/username1"
+        android:inputType="textPassword"/>
 
     <Button
         android:id="@+id/btnsignin1"
